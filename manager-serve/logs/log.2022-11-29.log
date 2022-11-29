@@ -1,0 +1,8 @@
+[2022-11-29T21:24:49.417] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:29:5
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
