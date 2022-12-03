@@ -5,9 +5,10 @@ import axios from 'axios'
 import config from '../config'
 import router from '../router/index.js'
 import { ElMessage } from 'element-plus'
+import storage from './storage'
 
-const TOKEN_INVALID = '登录过期，请重新登录'
-const NETWORK_ERROR = '网络请求失败'
+const TOKEN_INVALID = 'Token认证失败，请重新登录'
+const NETWORK_ERROR = '网络请求失败！'
 
 // 创建axios实例对象，添加全局配置
 const service = axios.create({
@@ -18,7 +19,8 @@ const service = axios.create({
 // 请求拦截
 service.interceptors.request.use((req) => {
     const headers = req.headers
-    if (!headers.Authorization) headers.Authorization = 'Jack'
+    const {token} = storage.getItem('userInfo')
+    if (!headers.Authorization) headers.Authorization = 'Jack '+ token
     return req
 })
 
@@ -26,9 +28,8 @@ service.interceptors.request.use((req) => {
 service.interceptors.response.use((res) => {
     const { code, msg, data } = res.data
     if (code === 200) {
-        console.log(code);
         return data
-    } else if (code === 40001) {
+    } else if (code === 50001) {
         ElMessage.error(TOKEN_INVALID)
         setTimeout(() => {
             router.push('/login')
@@ -45,6 +46,11 @@ function request(options) {
         options.params = options.data
     }
 
+    // 是否有局部的mock使用
+    if (typeof options.mock != 'undefined') {
+        config.mock = options.mock
+    }
+
     if (config.env === 'prod') {
         service.defaults.baseURL = config.baseApi
     } else {
@@ -53,4 +59,14 @@ function request(options) {
 
     return service(options)
 }
+['get', 'post', 'put', 'delete', 'patch'].forEach((item) => {
+    request[item] = (url, data, options) => {
+        return request({
+            url,
+            data,
+            method: item,
+            ...options
+        })
+    }
+})
 export default request

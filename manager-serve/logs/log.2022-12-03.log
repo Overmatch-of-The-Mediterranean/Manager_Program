@@ -1,0 +1,125 @@
+[2022-12-03T15:46:50.932] [ERROR] error - TokenExpiredError: jwt expired
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:43:25
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+[2022-12-03T15:48:30.179] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'split')
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:42:53
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:32:11
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+[2022-12-03T15:49:18.549] [ERROR] error - TokenExpiredError: jwt expired
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\秦世权\Desktop\manager-serve\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:43:25
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+[2022-12-03T16:08:14.713] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-03T16:09:33.858] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-03T16:09:54.201] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-03T16:10:00.344] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-03T16:10:02.029] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-03T16:40:09.070] [ERROR] error - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:20:24)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\秦世权\Desktop\manager-serve\app.js:38:11
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at views (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:15)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)

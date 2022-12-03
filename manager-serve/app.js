@@ -6,13 +6,16 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const log4js = require('./utils/log4j')
-
-const index = require('./routes/index')
+const router = require('koa-router')()
 const users = require('./routes/users')
+const jwt = require('jsonwebtoken')
+const koaJwt = require('koa-jwt')
+const utils = require('./utils/utils')
 
 // error handler
 onerror(app)
 
+require('./config/db')
 // middlewares
 app.use(bodyparser({
     enableTypes: ['json', 'form', 'text']
@@ -26,15 +29,31 @@ app.use(views(__dirname + '/views', {
 }))
 
 
+
+
 // logger 
 app.use(async (ctx, next) => {
-    await next()
-    log4js.info('log output')
+    log4js.info(`get params:${JSON.stringify(ctx.request.query)}`)
+    log4js.info(`post params:${JSON.stringify(ctx.request.body)}`)
+    await next().catch((err)=>{
+        if(err.status == '401') {
+            ctx.state = 200;
+            ctx.body = utils.fail('Token认证失败',utils.CODE.AUTH_ERROR)
+        }else {
+            throw err
+        }
+    })
 })
 
+// 验证Token
+app.use(koaJwt({secret:'imooc'}).unless({path:[/^\/api\/users\/login/]}))
+
+
 // routes
-app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
+app.use(router.routes(), router.allowedMethods()) // 全局路由
+router.prefix("/api") // 一级路由
+router.use(users.routes(), users.allowedMethods())  // 二级路由
+
 
 // error-handling
 app.on('error', (err, ctx) => {

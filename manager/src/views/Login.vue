@@ -1,32 +1,98 @@
 <template>
-    <h1>登录页面</h1>
-    <router-link :to="{ name: 'welcome' }">
-        回首页
-    </router-link>
-    
+    <div class="login-wrapper">
+        <div class="modal">
+            <el-form ref="userForm" :model="user" status-icon :rules="rules">
+                <div class="title">
+                    火星
+                </div>
+                <el-form-item prop="userName">
+                    <el-input type="text" :prefix-icon="Avatar" v-model="user.userName"/>
+                </el-form-item>
+                <el-form-item prop="userPwd">
+                    <el-input type="password" :prefix-icon="Lock" v-model="user.userPwd"/>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" class="btn-login" @click="toLogin">登录</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </div>
 </template>
 
 <script>
+import { Avatar, Lock } from "@element-plus/icons-vue";
 export default {
     name:'Login',
-    mounted(){
-        this.$request({
-            method:'get',
-            url: '/login',
-            data:{
-                name:'jack'
+    data(){
+        return {
+            user:{
+                userName:'',
+                userPwd:''
+            },
+            rules:{
+                userName:[
+                    {
+                        required:true,message:'请输入用户名',trigger:'blur'
+                    }
+                ],
+                userPwd: [
+                    {
+                        required: true, message: '请输入密码', trigger: 'blur'
+                    }
+                ]
             }
-        }).then((res)=>{
-            console.log(res);
-        })
+        }
+    },
+    methods:{
+        toLogin(){
+            this.$refs.userForm.validate((valid)=>{
+                if(valid) {
+                    this.$api.login(this.user).then(res=>{
+                        console.log(res);
+                        this.$store.commit('saveUserInfo',res)
+                        this.$router.push('/welcome')
+                    })
+                }else {
+                    return false
+                }
+            })
+        }
+    },
+    setup(){
+        return {
+            Avatar, Lock 
+        }
     }
 }
 
 </script>
 
 <style lang='scss' scoped>
-// .login {
-//     background-color: #fff;
-//     height: 100%;
-// }
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fcff;
+    width: 100vw;
+    height: 100vh;
+
+    .modal {
+        width: 500px;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 3px #c7c9cb4d;
+
+        .title {
+            font-size: 50px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-login {
+            width: 100%;
+        }
+    }
+}
 </style>
