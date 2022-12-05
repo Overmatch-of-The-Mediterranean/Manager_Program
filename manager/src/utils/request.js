@@ -19,14 +19,15 @@ const service = axios.create({
 // 请求拦截
 service.interceptors.request.use((req) => {
     const headers = req.headers
-    const {token} = storage.getItem('userInfo')
-    if (!headers.Authorization) headers.Authorization = 'Jack '+ token
+    const {token=""} = storage.getItem('userInfo') || {}
+    if (!headers.Authorization) headers.Authorization = 'Bearer '+ token
     return req
 })
 
 // 响应拦截
 service.interceptors.response.use((res) => {
     const { code, msg, data } = res.data
+    console.log(code,data);
     if (code === 200) {
         return data
     } else if (code === 50001) {
@@ -47,14 +48,15 @@ function request(options) {
     }
 
     // 是否有局部的mock使用
+    let isMock = config.mock
     if (typeof options.mock != 'undefined') {
-        config.mock = options.mock
+        isMock = options.mock
     }
 
     if (config.env === 'prod') {
         service.defaults.baseURL = config.baseApi
     } else {
-        service.defaults.baseURL = config.mock ? config.mockApi : config.baseApi
+        service.defaults.baseURL = isMock ? config.mockApi : config.baseApi
     }
 
     return service(options)

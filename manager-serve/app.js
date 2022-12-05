@@ -37,7 +37,7 @@ app.use(async (ctx, next) => {
     log4js.info(`post params:${JSON.stringify(ctx.request.body)}`)
     await next().catch((err)=>{
         if(err.status == '401') {
-            ctx.state = 200;
+            // ctx.state = 200;
             ctx.body = utils.fail('Token认证失败',utils.CODE.AUTH_ERROR)
         }else {
             throw err

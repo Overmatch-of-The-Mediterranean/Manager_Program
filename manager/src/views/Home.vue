@@ -55,9 +55,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="main-page">
-                <router-view></router-view>
-            </div>
+            <router-view></router-view>
         </div>
     </div>
   </div>
@@ -187,10 +185,6 @@ export default {
             background-color: #eef0f3;
             height:calc(100vh - 50px);
             padding: 20px;
-        }
-        .main-page {
-            height: 100%;
-            background-color: #fff;
         }
         &.fold {
             

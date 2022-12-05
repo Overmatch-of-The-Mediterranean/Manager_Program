@@ -1,0 +1,30 @@
+[2022-12-05T15:54:35.460] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\users.js:66:23
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:73:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:38:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-05T16:12:40.129] [ERROR] error - ReferenceError: Cannot access 'res' before initialization
+    at C:\Users\秦世权\Desktop\manager-serve\routes\users.js:67:23
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:73:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:38:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
