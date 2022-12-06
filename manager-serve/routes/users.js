@@ -86,13 +86,13 @@ router.post('/delete',async (ctx)=>{
 // 新增或编辑
 router.post('/operate',async (ctx)=>{
     const {userId, userName, userEmail, mobile, job, state, roleList, deptId, action} = ctx.request.body
-    // 新增，编辑公用一个接口，通过action的值来判断是新增还是编辑操作
+    // 新增，编辑共用一个接口，通过action的值来判断是新增还是编辑操作
     if(action=='add') {
         if(!userName || !userEmail || !mobile || !deptId) {
             ctx.body = utils.fail('参数错误',utils.CODE.PARAM_ERROR)
             return
         }
-        // 检查床的用户是否重复
+        // 检查创建的用户是否重复
         const res = await User.findOne({$or:[{userName},{userEmail}]},'_id userName userEmall')
         if(res) {
             ctx.body = utils.fail(`系统监测到有重复用户${userName}-${userEmail}`)

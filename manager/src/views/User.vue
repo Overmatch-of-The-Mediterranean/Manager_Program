@@ -323,7 +323,7 @@ export default {
                     params.action = action.value
                     let res = await globalProperties.$api.userSubmit(params)
                     showModal.value = false
-                    ElMessage.success('用户创建成功成功')
+                    ElMessage.success('用户创建成功')
                     handleReset('dialogForm')
                     getUserList()
                 }
@@ -368,6 +368,6 @@ export default {
 
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
 
 </style>

@@ -1,0 +1,84 @@
+[2022-12-06T12:07:01.750] [ERROR] error - ReferenceError: util is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:01.779] [ERROR] error - ReferenceError: util is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:25.295] [ERROR] error - ReferenceError: util is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:25.313] [ERROR] error - ReferenceError: util is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:58.174] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:58.201] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:59.048] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:07:59.067] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:08:00.925] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T12:08:00.942] [ERROR] error - TypeError: utils.getTreeMenu is not a function
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:14:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T15:04:54.920] [ERROR] error - ReferenceError: permissionList is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:15:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-06T15:04:54.941] [ERROR] error - ReferenceError: permissionList is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\menus.js:15:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:39:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
