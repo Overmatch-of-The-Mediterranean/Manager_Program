@@ -1,0 +1,51 @@
+[2022-12-08T12:10:53.345] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:20:24
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+[2022-12-08T12:11:46.885] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:20:24
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+[2022-12-08T16:03:59.208] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:43:47
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
