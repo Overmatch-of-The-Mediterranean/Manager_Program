@@ -55,7 +55,7 @@ export default {
             url: "/dept/list",
             method: "get",
             data: params,
-            mock: true,
+            mock: false,
         });
     },
     userSubmit(params) {
@@ -93,6 +93,22 @@ export default {
     updatePermission(params) {
         return request({
             url: "/roles/update/permission",
+            method: "post",
+            data: params,
+            mock: false,
+        });
+    },
+    allUserList() {
+        return request({
+            url: "/users/all/list",
+            method: "get",
+            data: {},
+            mock: false,
+        });
+    },
+    deptSubmit(params) {
+        return request({
+            url: "/dept/operate",
             method: "post",
             data: params,
             mock: false,
