@@ -1,70 +1,66 @@
-const router = require('koa-router')()
-const utils = require('../utils/utils')
-const Menu = require('../models/menuSchema')
+const router = require("koa-router")();
+const utils = require("../utils/utils");
+const Menu = require("../models/menuSchema");
 
-router.prefix('/menu')
+router.prefix("/menu");
 
 // 获取表单
-router.get('/list',async(ctx)=>{
-    const {menuName,menuState} = ctx.request.query
-    let params = {}
-    if(menuName) params.menuName = menuName
-    if(menuState) params.menuState = menuState
-    let rootList = await Menu.find(params) || []
+router.get("/list", async (ctx) => {
+    const { menuName, menuState } = ctx.request.query;
+    let params = {};
+    if (menuName) params.menuName = menuName;
+    if (menuState) params.menuState = menuState;
+    let rootList = (await Menu.find(params)) || [];
     // 获得树形数据
-    const permissionList = getTreeMenu(rootList,null,[])
-    ctx.body = utils.success(permissionList)
-    console.log('rootList=>>',rootList);
-    console.log('permis==>',permissionList);
-})
-
+    const permissionList = getTreeMenu(rootList, null, []);
+    ctx.body = utils.success(permissionList);
+});
 
 // 递归拼接树形结构
-function getTreeMenu(rootList,id,list){
-    for(let i=0;i<rootList.length;i++) {
-        let item = rootList[i]
-        if(String(item.parentId.slice().pop())==String(id)) {
-            list.push(item._doc)
+function getTreeMenu(rootList, id, list) {
+    for (let i = 0; i < rootList.length; i++) {
+        let item = rootList[i];
+        if (String(item.parentId.slice().pop()) == String(id)) {
+            list.push(item._doc);
         }
     }
-    list.map(item=>{
-        item.children = []
-        getTreeMenu(rootList,item._id,item.children)
-        if(item.children.length==0) {
-            delete item.children
-        }else if(item.children.length>0 && item.children[0].menuType ==2) {
-            item.action = item.children
+    list.map((item) => {
+        item.children = [];
+        getTreeMenu(rootList, item._id, item.children);
+        if (item.children.length == 0) {
+            delete item.children;
+        } else if (item.children.length > 0 && item.children[0].menuType == 2) {
+            item.action = item.children;
         }
-    })
-    return list
+    });
+    return list;
 }
 
 // 表单新增，编辑，删除
-router.post('/operate',async(ctx)=>{
-    const {_id,action,...params} = ctx.request.body
-    let res
-    let info
+router.post("/operate", async (ctx) => {
+    const { _id, action, ...params } = ctx.request.body;
+    let res;
+    let info;
     try {
-        if(action=='add') {
-            res = await Menu.create(params)
-            info = '新增菜单成功'
-        }else if(action=='edit') {
-            res = await Menu.findByIdAndUpdate(_id,params)
-            info = '编辑成功'
-        }else {
-            res = await Menu.findByIdAndRemove(_id)
-            await Menu.deleteMany({parentId:{
-                $all:[_id]
-            }})
-            info = '删除成功'
+        if (action == "add") {
+            res = await Menu.create(params);
+            info = "新增菜单成功";
+        } else if (action == "edit") {
+            res = await Menu.findByIdAndUpdate(_id, params);
+            info = "编辑成功";
+        } else {
+            res = await Menu.findByIdAndRemove(_id);
+            await Menu.deleteMany({
+                parentId: {
+                    $all: [_id],
+                },
+            });
+            info = "删除成功";
         }
-        ctx.body = utils.success('',info)
+        ctx.body = utils.success("", info);
     } catch (error) {
         ctx.body = utils.fail(error.stack);
     }
-    
-    
+});
 
-})
-
-module.exports = router
+module.exports = router;

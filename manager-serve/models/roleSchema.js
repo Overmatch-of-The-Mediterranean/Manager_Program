@@ -1,18 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const MenuSchema = mongoose.Schema({
     roleName: String,
     remark: String,
     permissionList: {
         checkedKeys: [],
-        halfCheckedKeys: []
+        halfCheckedKeys: [],
     },
     updateTime: {
         type: Date,
-        default: Date.now()
+        default: Date.now(),
     },
     createTime: {
         type: Date,
-        default: Date.now()
-    }
-})
-module.exports = mongoose.model('role', MenuSchema,'roles')
+        default: Date.now(),
+    },
+});
+module.exports = mongoose.model("roles", MenuSchema, "roles");

@@ -1,26 +1,7 @@
 <template>
   <div class="user-manage">
     <div class="query-form">
-        <el-form ref="form" :inline="true" :model="user">
-            <el-form-item prop="userId" label="用户ID：">
-                <el-input v-model="user.userId" placeholder="请输入用户ID"/>
-            </el-form-item>
-            <el-form-item prop="userName" label="用户名称：">
-                <el-input v-model="user.userName" placeholder="请输入用户名称"/>
-            </el-form-item>
-            <el-form-item>
-                <el-select  v-model="user.state">
-                    <el-option label="所有" :value="0" />
-                    <el-option label="在职" :value="1" />
-                    <el-option label="离职" :value="2" />
-                    <el-option label="实习期" :value="3" />
-                </el-select>
-            </el-form-item>
-            <el-form-item>
-                <el-button type="primary" @click="handleQuery">查询</el-button>
-                <el-button @click="handleReset('form')">重置</el-button>
-            </el-form-item>
-        </el-form>
+        <query-form :form="form" v-model="user" @handleQuery="handleQuery"/>
     </div>
     <div class="base-table">
         <div class="action">
@@ -105,48 +86,86 @@ import utils from '../utils/utils'
 import { ElMessage } from 'element-plus'
 import { getCurrentInstance,reactive,ref,onMounted, toRaw} from 'vue'
 export default {
-    name:'User',
-    setup(){
-        const instance = getCurrentInstance()
-        const { ctx } = getCurrentInstance()
+    name: "User",
+    setup() {
+        const instance = getCurrentInstance();
+        const { ctx } = getCurrentInstance();
+        const form = [
+            {
+                type:'input',
+                model:'userId',
+                label:'用户Id',
+                placeholder:'请输入用户Id'
+            },
+            {
+                type: 'input',
+                model: 'userName',
+                label: '用户名称',
+                placeholder: '请输入用户名称'
+            }
+            ,
+            {
+                type: 'select',
+                model: 'State',
+                label: '状态',
+                placeholder:'请选择状态',
+                options:[
+                    {
+                        label:'所有',
+                        value:0
+                    },
+                    {
+                        label: '在职',
+                        value: 1
+                    },
+                    {
+                        label: '离职',
+                        value: 2
+                    },
+                    {
+                        label: '实习期',
+                        value: 3
+                    }
+                ]
+            }
+        ]
         // 获取Componention API 全局属性
-        const globalProperties = getCurrentInstance().appContext.config.globalProperties
+        const globalProperties = getCurrentInstance().appContext.config.globalProperties;
         // 初始化用户状态
-        const user = reactive({
-            state:0
-        })
-        const checkedUserIds = ref([])
+        const user = ref({
+            state: 0
+        });
+        const checkedUserIds = ref([]);
         // 初始化列表
-        const userList = ref([])
+        const userList = ref([]);
         // 控制弹窗显示
-        const showModal = ref(false)
+        const showModal = ref(false);
         // 角色列表
-        const roleList = ref({})
+        const roleList = ref({});
         // 部门列表
-        const deptList = ref({})
+        const deptList = ref({});
         // 添加或编辑
-        const action = ref('add')
+        const action = ref("add");
         const userForm = reactive({
-            userName:'',
-            action:'',
-            userEmail:'',
-            state:3
-        })
-        
+            userName: "",
+            action: "",
+            userEmail: "",
+            state: 3
+        });
         // 表单验证规则
         const rules = reactive({
-            userName:[
+            userName: [
                 {
-                    required:true,
-                    message:'请输入用户名称',
-                    trigger:'blur'
+                    required: true,
+                    message: "请输入用户名称",
+                    trigger: "blur"
                 }
             ],
             userEmail: [
                 {
                     required: true,
-                    message: '请输入用户邮箱',
-                    trigger: 'blur'
+                    message: "请输入用户邮箱",
+                    trigger: "blur"
                 }
             ],
             mobile: [
@@ -157,8 +176,8 @@ export default {
                 },
                 {
                     pattern: /1[3-9]\d{9}/,
-                    message: '请输入正确手机号格式',
-                    trigger: 'blur'
+                    message: "请输入正确手机号格式",
+                    trigger: "blur"
                 }
             ],
             deptId: [
@@ -168,7 +187,7 @@ export default {
                     trigger: "blur",
                 },
             ],
-        })
+        });
         // 初始化动态表格-格式
         const columns = reactive([
             {
@@ -186,30 +205,30 @@ export default {
             {
                 label: "用户角色",
                 prop: "role",
-                formatter(row, column, value){
+                formatter(row, column, value) {
                     return {
-                        0:'管理员',
-                        1:'普通用户'
-                    }[value]
+                        0: "管理员",
+                        1: "普通用户"
+                    }[value];
                 }
             },
             {
                 label: "状态",
                 prop: "state",
-                formatter(row, column,value) {
+                formatter(row, column, value) {
                     return {
-                        1: '在职',
-                        2: '离职',
-                        3:'实习期'
-                    }[value]
+                        1: "在职",
+                        2: "离职",
+                        3: "实习期"
+                    }[value];
                 }
             },
             {
                 label: "注册时间",
                 prop: "createTime",
-                width:205,
-                formatter(row,column,value){
-                    return utils.formateDate(new Date(value))
+                width: 205,
+                formatter(row, column, value) {
+                    return utils.formateDate(new Date(value));
                 }
             },
             {
@@ -217,130 +236,126 @@ export default {
                 prop: "lastLoginTime",
                 width: 205,
                 formatter(row, column, value) {
-                    return utils.formateDate(new Date(value))
+                    return utils.formateDate(new Date(value));
                 }
             }
-        ])
+        ]);
         // 初始化分页结构
         const pager = {
-            pageNum:1,
-            pageSize:10,
-            total:0
-        }
+            pageNum: 1,
+            pageSize: 10,
+            total: 0
+        };
         // 初始化接口调用
-        onMounted(()=>{
-            getUserList()
-            getRoleAllList()
-            getDeptList()
-        })
-
+        onMounted(() => {
+            getUserList();
+            getRoleAllList();
+            getDeptList();
+        });
         // 获取用户列表
-        const getUserList = async ()=>{
-            let params = {...user,...pager}
+        const getUserList = async () => {
+            let params = { ...user.value, ...pager };
             try {
-                const { list, page } = await globalProperties.$api.userList(params)
-                userList.value = list
-                pager.total = page.total
-            } catch (error) {
+                const { list, page } = await globalProperties.$api.userList(params);
+                userList.value = list;
+                pager.total = page.total;
+            }
+            catch (error) {
                 console.log(error);
             }
-                
-        }
+        };
         // 查询事件，获取符合条件的用户列表
-        const handleQuery = ()=>{
-            getUserList()
-        }
+        const handleQuery = (values) => {
+            console.log(values,user.value);
+            getUserList();
+        };
         // 重置查询列表
-        const handleReset = (form)=>{
-            ctx.$refs[form].resetFields()
-        }
+        const handleReset = (form) => {
+            ctx.$refs[form].resetFields();
+        };
         // 分页跳转事件
-        const handleCurrentChange = (CurrentPage)=>{
-            pager.pageNum = CurrentPage
-            getUserList()
-        }
-
+        const handleCurrentChange = (CurrentPage) => {
+            pager.pageNum = CurrentPage;
+            getUserList();
+        };
         // 单条用户删除
-        const handleDelete = async (row)=>{
+        const handleDelete = async (row) => {
             await globalProperties.$api.userDelete({
-                userIds:[row.userId]
-            })
-            ElMessage.success('删除成功')
-            getUserList()
-        }
-
+                userIds: [row.userId]
+            });
+            ElMessage.success("删除成功");
+            getUserList();
+        };
         // 多条用户删除
-        const  handlePatchDelete = async ()=>{
-            if(checkedUserIds.value.length===0){
-                ElMessage.error('请选择用户')
-                return
+        const handlePatchDelete = async () => {
+            if (checkedUserIds.value.length === 0) {
+                ElMessage.error("请选择用户");
+                return;
             }
             const res = await globalProperties.$api.userDelete({
                 userIds: checkedUserIds.value
-            })
-            if (res.matchedCount >0) {
-                ElMessage.success('删除成功')
-                getUserList()
-            }else {
-                ElMessage.error('删除失败')
+            });
+            if (res.matchedCount > 0) {
+                ElMessage.success("删除成功");
+                getUserList();
             }
-            
-           
-        }
-
+            else {
+                ElMessage.error("删除失败");
+            }
+        };
         // 得到选中用户的id，list是选中用户的数据所组成的对象
-        const handleSelectionChange = async(list)=>{
-            let arr = []
-            list.map(item=>{
-                arr.push(item.userId)
-            })
-            checkedUserIds.value = arr
-        }
+        const handleSelectionChange = async (list) => {
+            let arr = [];
+            list.map(item => {
+                arr.push(item.userId);
+            });
+            checkedUserIds.value = arr;
+        };
         // 显示弹窗
-        const handleCreate = ()=>{
-            action.value='add'
-            showModal.value=true
-        }
+        const handleCreate = () => {
+            action.value = "add";
+            showModal.value = true;
+        };
         // 关闭弹窗
-        const handleClose = ()=>{
-            showModal.value = false
-            handleReset('dialogForm')
-        }
+        const handleClose = () => {
+            showModal.value = false;
+            handleReset("dialogForm");
+        };
         // 获取角色列表
-        const getRoleAllList = async ()=>{
-            roleList.value = await globalProperties.$api.roleAllList()
-        }
+        const getRoleAllList = async () => {
+            roleList.value = await globalProperties.$api.roleAllList();
+        };
         // 获取部门列表
-        const getDeptList = async ()=>{
-            deptList.value = await globalProperties.$api.deptList()
-        }
+        const getDeptList = async () => {
+            deptList.value = await globalProperties.$api.deptList();
+        };
         // 新增/编辑用户提交
-        const handleSubmit = ()=>{
-            ctx.$refs.dialogForm.validate(async (valid)=>{
-                if(valid) {
-                    let params = toRaw(userForm)
-                    params.userEmail +='@imooc.com'
-                    params.action = action.value
-                    let res = await globalProperties.$api.userSubmit(params)
-                    showModal.value = false
-                    ElMessage.success('用户创建成功')
-                    handleReset('dialogForm')
-                    getUserList()
+        const handleSubmit = () => {
+            ctx.$refs.dialogForm.validate(async (valid) => {
+                if (valid) {
+                    let params = toRaw(userForm);
+                    params.userEmail += "@imooc.com";
+                    params.action = action.value;
+                    let res = await globalProperties.$api.userSubmit(params);
+                    showModal.value = false;
+                    ElMessage.success("用户创建成功");
+                    handleReset("dialogForm");
+                    getUserList();
                 }
-            })
-        }
+            });
+        };
         // 用户编辑
-        const handleEdit = (row)=>{
-            action.value = 'edit'
-            showModal.value = true
-            ctx.$nextTick(()=>{
-                Object.assign(userForm, row)
-            })
-        }
+        const handleEdit = (row) => {
+            action.value = "edit";
+            showModal.value = true;
+            ctx.$nextTick(() => {
+                Object.assign(userForm, row);
+            });
+        };
         return {
-            user, 
-            userList, 
-            columns, 
+            user,
+            userList,
+            columns,
             pager,
             checkedUserIds,
             showModal,
@@ -349,8 +364,9 @@ export default {
             deptList,
             rules,
             action,
-            getUserList, 
-            handleQuery, 
+            form,
+            getUserList,
+            handleQuery,
             handleReset,
             handleCurrentChange,
             handleDelete,
@@ -362,7 +378,7 @@ export default {
             handleClose,
             handleSubmit,
             handleEdit
-        }
+        };
     }
 }
 

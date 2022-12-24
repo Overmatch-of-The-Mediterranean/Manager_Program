@@ -16,7 +16,7 @@ export default {
             url: "/leave/count",
             method: "get",
             data: {},
-            mock: true,
+            mock: false,
         });
     },
     menuList(params) {
@@ -24,7 +24,7 @@ export default {
             url: "/menu/list",
             method: "get",
             data: params,
-            mock: true,
+            mock: false,
         });
     },
     userList(params) {
@@ -32,6 +32,14 @@ export default {
             url: "/users/list",
             method: "get",
             data: params,
+            mock: false,
+        });
+    },
+    getPermissionList() {
+        return request({
+            url: "/users/getPermissionList",
+            method: "get",
+            data: {},
             mock: false,
         });
     },
@@ -47,7 +55,7 @@ export default {
             url: "/roles/allList",
             method: "get",
             data: params,
-            mock: true,
+            mock: false,
         });
     },
     deptList(params) {
@@ -109,6 +117,30 @@ export default {
     deptSubmit(params) {
         return request({
             url: "/dept/operate",
+            method: "post",
+            data: params,
+            mock: false,
+        });
+    },
+    applyList(params) {
+        return request({
+            url: "/leave/list",
+            method: "get",
+            data: params,
+            mock: false,
+        });
+    },
+    applyOperate(params) {
+        return request({
+            url: "/leave/operate",
+            method: "post",
+            data: params,
+            mock: false,
+        });
+    },
+    leaveApprove(params) {
+        return request({
+            url: "/leave/approve",
             method: "post",
             data: params,
             mock: false,

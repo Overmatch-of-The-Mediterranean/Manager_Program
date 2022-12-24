@@ -35,7 +35,11 @@
                 </div>
            </div>
             <div class="user-info">
-                <el-badge :is-dot="(noticeCount>0? true:false)" class="notice">
+                <el-badge 
+                :is-dot="(noticeCount>0? true:false)" 
+                class="notice"
+                @click="$router.push('/audit/approve')"
+                >
                     <el-icon>
                         <Bell />
                     </el-icon>
@@ -77,6 +81,11 @@ export default {
         }
         
     },
+    computed:{
+        noticeCount(){
+            return this.$store.state.noticeCount
+        }
+    },
     mounted(){
         this.getNoticeCount()
         this.getMenuList()
@@ -85,7 +94,7 @@ export default {
         handleLogout(key){
             if(key==='email') return
             this.$store.commit('saveUserInfo','')
-            this.userInfo = null
+            this.userInfo = {}
             this.$router.push('/login')
         },
         toggle(){
@@ -94,7 +103,7 @@ export default {
         async getNoticeCount(){
             try {
                 const count = await this.$api.noticeCount()
-                this.noticeCount = count
+                this.$store.commit('saveNoticeCount',count)
             } catch (error) {
                 console.log(error);
             }
@@ -102,7 +111,7 @@ export default {
         },
         async getMenuList() {
             try {
-                const menuList = await this.$api.menuList()
+                const menuList = await this.$api.getPermissionList()
                 this.menuList = menuList
             } catch (error) {
                 console.log(error);
@@ -171,6 +180,7 @@ export default {
             .user-info {
                 .notice {
                     line-height: 30px;
+                    cursor: pointer;
                 }
                 .dropdown {
                     padding: 15px 0 0 15px;

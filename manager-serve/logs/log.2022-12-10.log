@@ -1,0 +1,180 @@
+[2022-12-10T11:38:46.039] [ERROR] error - TypeError: jwt.verify is not a function
+    at Object.decoded (C:\Users\秦世权\Desktop\manager-serve\utils\utils.js:72:24)
+    at C:\Users\秦世权\Desktop\manager-serve\routes\users.js:79:26
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:73:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T11:39:18.818] [ERROR] error - TypeError: jwt.verify is not a function
+    at Object.decoded (C:\Users\秦世权\Desktop\manager-serve\utils\utils.js:72:24)
+    at C:\Users\秦世权\Desktop\manager-serve\routes\users.js:79:26
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-compose\index.js:42:32)
+    at jwt (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-jwt\lib\index.js:73:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T12:01:42.209] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'map')
+    at getTreeMenu (C:\Users\秦世权\Desktop\manager-serve\utils\utils.js:60:14)
+    at getMenuList (C:\Users\秦世权\Desktop\manager-serve\routes\users.js:104:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\routes\users.js:83:20
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T12:03:35.630] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'map')
+    at getTreeMenu (C:\Users\秦世权\Desktop\manager-serve\utils\utils.js:60:14)
+    at getMenuList (C:\Users\秦世权\Desktop\manager-serve\routes\users.js:105:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\routes\users.js:83:20
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T12:06:27.234] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'map')
+    at getTreeMenu (C:\Users\秦世权\Desktop\manager-serve\utils\utils.js:60:14)
+    at getMenuList (C:\Users\秦世权\Desktop\manager-serve\routes\users.js:105:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\routes\users.js:83:20
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T12:32:49.120] [ERROR] error - CastError: Cast to ObjectId failed for value "{
+  roleKeys: [
+    '60180b07b1eaed6c45fbebdb',
+    '60150cb764de99631b2c3cd3',
+    '60180b59b1eaed6c45fbebdc'
+  ]
+}" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:33:55.240] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:34:53.743] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:35:15.086] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:36:39.426] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:39:23.910] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:39:32.716] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:41:22.950] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:41:26.096] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:41:29.615] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:42:29.857] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:42:39.327] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:42:40.460] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:44:21.078] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:44:57.534] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:45:13.357] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:45:29.270] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:45:32.528] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:47:13.877] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T12:51:26.054] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60180b07b1eaed6c45fbebdb' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T13:22:14.792] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T13:22:16.262] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T13:45:45.932] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "role"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T13:47:34.419] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T13:57:04.832] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:00:56.801] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:01:01.119] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:01:02.085] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:01:25.910] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:01:30.156] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:02:28.002] [ERROR] error - CastError: Cast to ObjectId failed for value "{ roleKeys: [ '60150cb764de99631b2c3cd3' ] }" (type Object) at path "_id" for model "roles"
+    at model.Query.exec (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4897:21)
+    at model.Query.Query.then (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:4996:15)
+[2022-12-10T14:11:59.643] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:14:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T14:12:06.292] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:14:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T14:12:08.436] [ERROR] error - ReferenceError: ctx is not defined
+    at C:\Users\秦世权\Desktop\manager-serve\routes\roles.js:14:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:42:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-10T21:42:48.481] [ERROR] error - 数据库连接失败

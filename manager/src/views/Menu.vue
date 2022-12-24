@@ -84,7 +84,6 @@
 </template>
 
 <script>
-import { objectPick } from '@vueuse/shared'
 import { ElMessage } from 'element-plus'
 import utils from '../utils/utils'
 export default {
@@ -153,8 +152,8 @@ export default {
                     prop: "menuState",
                     formatter(row, column, value){
                         return {
-                            0:'正常',
-                            1:'停用'
+                            1:'正常',
+                            2:'停用'
                         }[value]
                     }
                 },
@@ -179,7 +178,6 @@ export default {
             try {
                 let list = await this.$api.menuList(this.queryForm)
                 this.menuList = list
-                console.log('==>', this.menuList);
             } catch (error) {
                 throw new Error(error)
             }
@@ -215,7 +213,6 @@ export default {
         handleEdit(row){
             this.showModal = true
             this.action = 'edit',
-            console.log('hhhhhhhhhhhhhhhh',row);
             this.$nextTick(() =>{
                 Object.assign(this.menuForm,row)
             })

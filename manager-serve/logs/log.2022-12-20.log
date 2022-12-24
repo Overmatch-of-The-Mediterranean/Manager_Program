@@ -1,0 +1,70 @@
+[2022-12-20T09:54:39.057] [ERROR] error - 数据库连接失败
+[2022-12-20T11:17:50.908] [ERROR] error - TypeError: Assignment to constant variable.
+    at C:\Users\秦世权\Desktop\manager-serve\routes\leave.js:43:17
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+[2022-12-20T11:17:59.135] [ERROR] error - TypeError: Assignment to constant variable.
+    at C:\Users\秦世权\Desktop\manager-serve\routes\leave.js:43:17
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+[2022-12-20T11:18:37.668] [ERROR] error - TypeError: Assignment to constant variable.
+    at C:\Users\秦世权\Desktop\manager-serve\routes\leave.js:43:17
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at allowedMethods (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:407:12)
+    at dispatch (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-router\lib\router.js:346:16
+[2022-12-20T11:19:55.087] [ERROR] error - ObjectParameterError: Parameter "filter" to find() must be an object, got 6394a6e21fb1fe3f3b2110a4
+    at model.Query.Query.find (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:2348:16)
+    at Function.find (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\model.js:2250:13)
+    at C:\Users\秦世权\Desktop\manager-serve\routes\leave.js:50:33
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:43:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)
+[2022-12-20T11:24:33.800] [ERROR] error - ObjectParameterError: Parameter "filter" to find() must be an object, got 6394a6e21fb1fe3f3b2110a4
+    at model.Query.Query.find (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\query.js:2348:16)
+    at Function.find (C:\Users\秦世权\Desktop\manager-serve\node_modules\mongoose\lib\model.js:2250:13)
+    at C:\Users\秦世权\Desktop\manager-serve\routes\leave.js:50:31
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\秦世权\Desktop\manager-serve\app.js:43:5
+    at async serve (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-static\index.js:53:9)
+    at async logger (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (C:\Users\秦世权\Desktop\manager-serve\node_modules\koa-bodyparser\index.js:95:5)

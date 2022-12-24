@@ -1,9 +1,12 @@
 const router = require("koa-router")();
 const User = require("../models/userSchema");
+const Menu = require("../models/menuSchema");
+const Role = require("../models/roleSchema");
 const Counter = require("../models/counterSchema");
 const utils = require("../utils/utils");
 const jwt = require("jsonwebtoken");
 const md5 = require("md5");
+
 router.prefix("/users");
 
 // 登录路由
@@ -74,11 +77,39 @@ router.get("/list", async (ctx) => {
         utils.fail(`查询异常${error.stack}`);
     }
 });
+router.get("/getPermissionList", async (ctx) => {
+    const authorization = ctx.request.headers.authorization;
+    let { data } = utils.decoded(authorization);
+    let menuList = await getMenuList(data.role, data.roleList);
+    console.log("menuList===>11", menuList);
+    ctx.body = utils.success(menuList);
+});
 
+async function getMenuList(userRole, roleKeys) {
+    let rootList = [];
+    if (userRole == 0) {
+        rootList = await Menu.find({});
+    } else {
+        let permissionList = [];
+        let roleList = await Role.find({ _id: { $in: roleKeys } });
+        console.log("roleList==>", roleList);
+        roleList.map((role) => {
+            let { checkedKeys, halfCheckedKeys } = role.permissionList;
+            permissionList = permissionList.concat([
+                ...checkedKeys,
+                ...halfCheckedKeys,
+            ]);
+        });
+        permissionList = [...new Set(permissionList)];
+        rootList = await Menu.find({ _id: { $in: permissionList } });
+    }
+    return utils.getTreeMenu(rootList, null, []);
+}
 // 删除用户
 router.post("/delete", async (ctx) => {
+    // 待删除的用户Id数组
     const { userIds } = ctx.request.body;
-
+    console.log("userIds==>", userIds);
     const res = await User.updateMany(
         {
             userId: {

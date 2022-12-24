@@ -6,7 +6,7 @@ const { fail } = require("../utils/utils");
 router.prefix("/roles");
 
 // 获取所有角色列表
-router.get("/allList", async () => {
+router.get("/allList", async (ctx) => {
     try {
         const list = await Role.find({}, "_id roleName");
         ctx.body = utils.success(list);

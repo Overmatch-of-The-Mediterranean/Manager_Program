@@ -11,6 +11,7 @@ const users = require("./routes/users");
 const menus = require("./routes/menus");
 const roles = require("./routes/roles");
 const depts = require("./routes/depts");
+const leave = require("./routes/leave");
 const jwt = require("jsonwebtoken");
 const koaJwt = require("koa-jwt");
 const utils = require("./utils/utils");
@@ -59,6 +60,7 @@ router.use(users.routes(), users.allowedMethods()); // 二级路由
 router.use(menus.routes(), menus.allowedMethods());
 router.use(roles.routes(), roles.allowedMethods());
 router.use(depts.routes(), depts.allowedMethods());
+router.use(leave.routes(), leave.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {

@@ -21,6 +21,8 @@
 
 <script>
 import { Avatar, Lock } from "@element-plus/icons-vue";
+import storage from '../utils/storage'
+import utils from "../utils/utils";
 export default {
     name:'Login',
     data(){
@@ -44,19 +46,41 @@ export default {
         }
     },
     methods:{
-        toLogin(){
-            this.$refs.userForm.validate((valid)=>{
-                if(valid) {
-                    this.$api.login(this.user).then(res=>{
+        toLogin() {
+            this.$refs.userForm.validate((valid) => {
+                if (valid) {
+                    this.$api.login(this.user).then(async res => {
                         console.log(res);
-                        this.$store.commit('saveUserInfo',res)
+                        this.$store.commit('saveUserInfo', res)
+                        await this.loadAsyncRoute()
                         this.$router.push('/welcome')
                     })
-                }else {
+                } else {
                     return false
                 }
             })
-        }
+        },
+        async loadAsyncRoute() {
+            const userInfo = storage.getItem("userInfo") || {};
+            if (userInfo.token) {
+                try {
+                    // console.log("api===>", api);
+                    let menuList = await this.$api.getPermissionList();
+                    // console.log('api===>',this.$api);
+                    // console.log("menuList111===>", menuList);
+                    let routes = utils.generateRoute(menuList);
+                    // console.log("routes111===>", routes);
+                    routes.map((route) => {
+                        let url = `./../views/${route.component}.vue`;
+                        route.component = () => import(url);
+                        this.$router.addRoute("home", route);
+                    });
+                } catch (error) {
+                    console.log(error.stack);
+                }
+            }
+        },
+        
     },
     setup(){
         return {
